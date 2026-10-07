@@ -1,0 +1,921 @@
+<meta charset="utf-8">
+<title>ToneLAB Homepage</title>
+<meta name="description" content="ToneLAB: Reformer Pilates, strength and conditioning, and HIIT studios across Newcastle, Lake Macquarie and Port Stephens. Nine studios, one All Access membership. Move with purpose.">
+<meta property="og:title" content="ToneLAB | Reformer, Performance & Training studios in Newcastle">
+<meta property="og:description" content="Nine studios across Newcastle, Lake Macquarie and Port Stephens. Reformer Pilates, strength and conditioning, HIIT. One membership.">
+<meta property="og:image" content="img/hero-poster.jpg">
+<meta name="theme-color" content="#111111">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+/* Layout: one black-and-white editorial column, full-bleed photography graded mono, division colour appears only as a hairline, a dot or a tag. Single committed look (no theme switch): this is a brand mockup. */
+:root{
+  --black:#111111; --ink:#1c1c1c; --white:#ffffff; --paper:#f6f5f2; --btn-hover:#e6e4df; --grey:#8a8a86; --line:rgba(17,17,17,.12); --line-dark:rgba(255,255,255,.14);
+  --reformer:#9A72A6; --performance:#9DAC87; --training:#EFBD3D;
+  --display:'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --serif:'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --gutter:clamp(18px, 5vw, 72px);
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--black);font-family:var(--display);font-size:16px;line-height:1.55;overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+h1,h2,h3{margin:0;font-weight:500;text-wrap:pretty;letter-spacing:-.02em;line-height:1}
+p{margin:0}
+.wrap{padding-inline:var(--gutter)}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:10px}
+
+.em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c,#111);flex:none}
+.c-reformer{--c:var(--reformer)} .c-performance{--c:var(--performance)} .c-training{--c:var(--training)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--black);background:var(--black);color:var(--white);transition:transform .25s ease,background .25s ease,color .25s ease;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--black)}
+.btn.light{background:var(--white);color:var(--black);border-color:var(--white)}
+.btn.light:hover,.btn.light:active,.btn.light:focus-visible{background:var(--btn-hover);border-color:var(--btn-hover)}
+.btn.ghost:hover,.btn.ghost:active{background:var(--btn-hover);border-color:var(--black)}
+.nav:not(.solid) .nav-cta:hover,.nav:not(.solid) .nav-cta:active{background:var(--btn-hover)!important;border-color:var(--btn-hover)!important}
+.stick .btn.ghost:hover{background:var(--btn-hover)}
+.btn.ghost-light{background:transparent;color:var(--white);border-color:rgba(255,255,255,.5)}
+.btn.ghost-light:hover{background:var(--white);color:var(--black)}
+.arrow{display:inline-block;transition:transform .25s ease}
+a:hover .arrow,.btn:hover .arrow{transform:translateX(4px)}
+:focus-visible{outline:1px solid currentColor;outline-offset:3px}
+.burger:focus,.burger:focus-visible,.chip:focus,.qnav button:focus{outline:none}
+
+/* skip link + sticky bar */
+.skip{position:absolute;left:-999px;top:0;background:var(--black);color:var(--white);padding:10px 14px;z-index:100}
+.skip:focus{left:var(--gutter);top:8px}
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:8px;padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.stick.show{transform:none}
+.stick .btn{flex:1;height:48px;padding:0 14px;font-size:12px}
+body.menu-open .stick{transform:translateY(110%)}
+@media (min-width:900px){.stick{display:none}}
+.hero-head{display:grid;gap:28px;min-width:0;max-width:100%}
+.hero h1{width:max-content;max-width:100%}
+@media (max-width:899px){.hero h1{width:auto;max-width:100%;overflow:hidden}.hero-inner,.hero-head,.hero-row{min-width:0;max-width:100%;grid-template-columns:minmax(0,1fr)}.hero-ctas{min-width:0}}
+.hero-sub{font-size:clamp(15px,2vw,19px);font-weight:400;letter-spacing:0;line-height:1.4;color:rgba(255,255,255,.85);max-width:100%;min-width:0;text-wrap:pretty}
+.member{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.75);display:inline-flex;gap:8px;align-items:center;flex-basis:100%;margin-top:16px}
+.member:hover{color:#fff}
+/* mega menu */
+.nav-links .has-mega{position:relative;display:inline-flex;align-items:center}
+.nav-links .has-mega>a{display:inline-block}
+.mega{position:absolute;top:100%;left:50%;transform:translate(-50%,8px);padding-top:18px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
+.has-mega:hover .mega,.has-mega:focus-within .mega{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
+.mega-in{background:var(--black);color:var(--white);border:1px solid var(--line-dark);border-radius:18px;padding:26px 28px;display:grid;grid-template-columns:repeat(3,200px);gap:28px;white-space:normal;text-transform:none;letter-spacing:0;font-weight:400}
+.mega-sm .mega-in{grid-template-columns:repeat(3,180px)}
+.nav.solid .mega-col.c-all{--c:var(--black)}
+.nav.solid .mega-in{background:var(--white);color:var(--black);border-color:var(--line);box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
+.mega-col{--c:#fff;display:grid;gap:6px;align-content:start}
+.mega-col .mk{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;margin-bottom:6px}
+.mega-col .mk::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.mega-col a{font-size:13px;opacity:.8;padding:3px 0}
+.mega-col a::after{display:none}
+.mega-col a:hover{opacity:1}
+.mega-col a.all{font-weight:600;opacity:1;margin-top:6px}
+/* how it works */
+.how{background:var(--paper);padding-block:clamp(64px,8vw,110px)}
+.how .head{display:grid;gap:14px;padding-bottom:36px}
+.how h2{font-size:clamp(32px,5.4vw,64px);font-weight:300;letter-spacing:-.04em;line-height:1}
+.steps{display:grid;gap:0;border-top:1px solid var(--black);counter-reset:step}
+.step{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
+.step .n{font-size:clamp(72px,8vw,120px);font-weight:300;letter-spacing:-.06em;line-height:.8;font-variant-numeric:tabular-nums;color:var(--black)}
+.step h3{font-size:clamp(22px,3.4vw,30px);font-weight:500;letter-spacing:-.025em;line-height:1.05}
+.step p{margin-top:10px;max-width:38ch;color:#3a3a38;font-size:15px}
+.step a{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;border-bottom:1px solid var(--black);padding-bottom:3px}
+@media (min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}.step{grid-template-columns:1fr;padding:34px 32px;border-right:1px solid var(--line)}.step:first-child{padding-left:0}.step:last-child{border-right:0;padding-right:0}.step .n{margin-bottom:18px}}
+/* studio finder extras */
+.near{height:38px;padding:0 16px;border:1px solid var(--black);border-radius:999px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;background:var(--black);color:var(--white);transition:.25s}
+.near:hover{background:var(--white);color:var(--black)}
+.near[disabled]{opacity:.6}
+.near-msg{font-size:13px;color:var(--grey);margin-left:4px}
+.studio .dist{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);font-variant-numeric:tabular-nums;display:none}
+.studio .dist.on{display:inline}
+.more{display:flex;justify-content:center;padding-top:20px}
+.more .btn{height:46px}
+@media (max-width:899px){.studio.over{display:none}.list.all .studio.over{display:grid}}
+@media (min-width:900px){.more{display:none}}
+/* FAQ */
+.faq{padding-block:clamp(64px,8vw,110px);display:grid;gap:30px}
+.faq h2{font-size:clamp(30px,5vw,56px);font-weight:300;letter-spacing:-.04em;line-height:1;}
+.faq-list{border-top:1px solid var(--black);max-width:72ch}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;font-size:clamp(17px,2.4vw,21px);font-weight:500;letter-spacing:-.015em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-weight:300;font-size:26px;line-height:1;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:#3a3a38;font-size:15px;max-width:60ch}
+@media (min-width:900px){.faq{grid-template-columns:1fr 1.6fr;align-items:start}}
+/* NAV */
+.nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;padding:14px var(--gutter);display:flex;align-items:center;justify-content:space-between;color:var(--white);mix-blend-mode:difference;transition:padding .3s ease}
+.nav.solid{mix-blend-mode:normal;color:var(--black);background:rgba(255,255,255,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding-block:10px}
+.logo{display:inline-block;width:150px;aspect-ratio:600/92;background:currentColor;-webkit-mask:url(img/logo-mask.png) no-repeat center/contain;mask:url(img/logo-mask.png) no-repeat center/contain;font-size:0;color:inherit}
+.logo b,.logo span{font-size:0}
+.fbot .logo{width:110px}
+@media (max-width:899px){.logo{width:124px}}
+.nav-links{display:none;gap:28px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.nav-links a{position:relative;padding:6px 0}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:currentColor;transition:right .3s ease}
+.nav-links a:hover::after{right:0}
+.nav-cta{display:none}
+.burger{width:44px;height:44px;display:grid;place-items:center;margin-right:-10px}
+.burger i{display:block;width:22px;height:1.5px;background:currentColor;position:relative;transition:.3s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:22px;height:1.5px;background:currentColor;transition:.3s}
+.burger i::before{top:-7px} .burger i::after{top:7px}
+body.menu-open .burger i{background:transparent} body.menu-open .burger i::before{top:0;transform:rotate(45deg)} body.menu-open .burger i::after{top:0;transform:rotate(-45deg)}
+@media (min-width:900px){.nav-links{display:flex}.nav-cta{display:inline-flex;height:44px;padding:0 20px}.burger{display:none}.nav.solid .nav-cta{background:var(--black);color:var(--white);border-color:var(--black)}.nav:not(.solid) .nav-cta{background:var(--white);color:var(--black);border-color:var(--white)}}
+.menu{position:fixed;inset:0;z-index:45;background:var(--black);color:var(--white);padding:calc(90px + env(safe-area-inset-top,0px)) var(--gutter) 40px;display:flex;flex-direction:column;justify-content:space-between;transform:translateY(-100%);transition:transform .5s cubic-bezier(.76,0,.24,1);overflow:auto}
+body.menu-open .menu{transform:none}
+body.menu-open{overflow:hidden}
+body.menu-open .nav{mix-blend-mode:normal;color:var(--white);background:transparent;border:0}
+.menu nav{display:flex;flex-direction:column;gap:6px}
+.menu nav a{font-size:clamp(30px,8vw,48px);font-weight:300;letter-spacing:-.03em;line-height:1.1;display:flex;align-items:center;gap:14px;padding:6px 0;border-bottom:1px solid var(--line-dark)}
+.menu nav a .dot{width:10px;height:10px}
+.menu-foot{display:flex;flex-direction:column;gap:18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9a9a96;margin-top:32px;padding-top:0;border-top:0}
+.menu-foot a:not(.btn),.menu-foot span{line-height:1.4;padding:0}
+.menu-foot .btn{margin-bottom:6px}
+.menu-foot .btn{align-self:flex-start}
+
+/* HERO */
+.hero{position:relative;min-height:88svh;min-height:88vh;display:flex;align-items:flex-end;color:var(--white);background:var(--black);overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;overflow:hidden;background:#000}
+.hero-media iframe{position:absolute;top:50%;left:50%;width:max(100vw,177.78vh);height:max(100vh,56.25vw);transform:translate(-50%,-50%) scale(1.02);border:0;pointer-events:none;filter:grayscale(1) contrast(1.08) brightness(.74)}
+.hero-media.yt .hero-video{opacity:0;transition:opacity 1s ease}
+.hero .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:brightness(.72);transform:scale(1.06);animation:heroIn 2.4s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes heroIn{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,.72) 100%)}
+.hero-inner{position:relative;z-index:1;width:100%;padding:0 var(--gutter) clamp(28px,5vw,56px);display:grid;gap:28px}
+.hero h1{font-size:clamp(44px,8.6vw,124px);font-weight:300;letter-spacing:-.045em;line-height:.95;font-variation-settings:"wdth" 92;white-space:nowrap}
+.hero h1 .em{font-size:1.08em;line-height:.9}
+.hero-row{display:grid;gap:28px;align-items:end}
+.hero-row p{max-width:34ch;font-size:15px;line-height:1.5;color:rgba(255,255,255,.82)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-ctas .btn{flex:1 1 auto}
+.divs{display:flex;gap:18px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.divs span{display:inline-flex;align-items:center;gap:8px}
+@media (min-width:900px){.hero-ctas .btn{flex:none}}
+
+/* STRIP */
+.strip{background:var(--paper);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(2,1fr)}
+.strip div{padding:22px var(--gutter);border-top:1px solid var(--line)}
+.strip div{border-right:1px solid var(--line)}.strip div:last-child{border-right:0}
+.strip strong{display:block;font-size:34px;font-weight:300;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.strip small{display:block;margin-top:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);font-weight:600}
+@media (min-width:900px){.strip{grid-template-columns:repeat(3,1fr)}.strip div{border-top:0;border-right:1px solid var(--line)}.strip div:last-child{border-right:0}}
+
+/* INTRO */
+.intro{padding-block:clamp(72px,10vw,140px);display:grid;gap:36px}
+.intro h2{font-size:clamp(30px,5.2vw,64px);font-weight:300;letter-spacing:-.035em;line-height:1.02;}
+.intro-col{display:grid;gap:22px;max-width:52ch;font-size:17px;line-height:1.6;color:#3a3a38}
+.intro-col .btn{justify-self:start}
+@media (min-width:900px){.intro{grid-template-columns:1.2fr 1fr;align-items:start}.intro-col{padding-top:14px}}
+
+/* DIVISIONS */
+.divisions{background:var(--black);color:var(--white);padding-block:clamp(64px,8vw,110px) 0}
+.divisions .head{display:grid;gap:14px;padding-bottom:40px}
+.divisions h2{font-size:clamp(34px,6vw,76px);font-weight:300;letter-spacing:-.04em;line-height:.98}
+.cards{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line-dark)}
+.card{--c:#fff;position:relative;display:grid;grid-template-rows:auto 1fr;min-height:70svh;border-bottom:1px solid var(--line-dark);overflow:hidden;isolation:isolate}
+.card figure{margin:0;position:absolute;inset:0;z-index:-1}
+.card img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05) brightness(.62);transition:filter .9s ease,transform 1.4s cubic-bezier(.2,.7,.2,1);transform:scale(1.02)}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.75) 85%)}
+.card:hover img{filter:grayscale(0) contrast(1) brightness(.75);transform:scale(1.07)}
+.card-top{display:flex;justify-content:space-between;align-items:center;padding:22px var(--gutter);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.card-top .tag{display:inline-flex;align-items:center;gap:8px}
+.card-top .tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.card-body{align-self:end;padding:0 var(--gutter) 30px;display:grid;gap:16px}
+.card h3{font-size:clamp(44px,9vw,96px);font-weight:300;letter-spacing:-.045em;line-height:.92}
+.card h3 b{font-weight:700}
+.card p{max-width:40ch;color:rgba(255,255,255,.8);font-size:15px}
+.classes{display:flex;flex-wrap:wrap;gap:8px}
+.classes span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 11px}
+.card-link{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding-top:6px}
+.card-link::before{content:"";width:28px;height:2px;background:var(--c)}
+.card::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--c);transition:width .7s cubic-bezier(.2,.7,.2,1)}
+.card:hover::after,.card.in::after{width:100%}
+@media (min-width:900px){.cards{grid-template-columns:repeat(3,1fr)}.card{min-height:82vh;border-right:1px solid var(--line-dark)}.card:last-child{border-right:0}.card h3{font-size:clamp(40px,4.6vw,76px)}}
+
+/* STUDIOS */
+.studios{padding-block:clamp(72px,10vw,140px);display:grid;gap:40px}
+.studios .head{display:grid;gap:18px}
+.studios h2{font-size:clamp(34px,6vw,76px);font-weight:300;letter-spacing:-.04em;line-height:.98;}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters .lbl{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);font-weight:600;margin-right:6px;width:100%}
+.chip{height:38px;padding:0 16px;border:1px solid var(--line);border-radius:999px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:.25s}
+.chip.on,.chip:hover{background:var(--black);color:var(--white);border-color:var(--black)}
+.filter-row{display:grid;gap:14px}
+@media (min-width:900px){.filter-row{grid-template-columns:auto auto;justify-content:space-between;align-items:end}.filters .lbl{width:auto}}
+.list{border-top:1px solid var(--black)}
+.studio{--c:#111;display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);transition:opacity .35s,transform .35s}
+.studio.hide{display:none}
+.studio .where{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;color:var(--grey)}
+.studio .where::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.studio h3{font-size:clamp(24px,4.6vw,38px);font-weight:300;letter-spacing:-.03em;line-height:1.05}
+.studio h3 b{font-weight:600}
+.studio address{font-style:normal;font-size:14px;color:#55554f;grid-column:1}
+.studio .acts{grid-column:2;grid-row:1/4;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.studio .acts a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.studio .acts a.primary{background:var(--black);color:var(--white);border-radius:999px;padding:11px 16px}
+.studio .acts a.secondary{padding:11px 4px;color:var(--grey)}
+.studio:hover .acts a.secondary{color:var(--black)}
+@media (min-width:900px){.studio{grid-template-columns:140px 1.2fr 1fr auto;padding:26px 0}.studio address{grid-column:3}.studio .acts{grid-column:4;grid-row:1;flex-direction:row;align-items:center}.studio h3{grid-column:2}.studio .where{grid-column:1}}
+.empty{padding:40px 0;color:var(--grey);text-align:center;display:none}
+.empty.show{display:block}
+
+/* APP */
+.app{background:var(--paper);padding-block:clamp(72px,10vw,140px);overflow:hidden}
+.app-grid{display:grid;gap:48px;align-items:center}
+.app-copy{display:grid;gap:22px}
+.app h2{font-size:clamp(34px,6vw,72px);font-weight:300;letter-spacing:-.04em;line-height:.98;}
+.app p{max-width:44ch;font-size:17px;line-height:1.6;color:#3a3a38}
+.stores{display:flex;flex-wrap:wrap;gap:10px}
+.store{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 18px 0 14px;border-radius:12px;background:var(--black);color:var(--white);font-size:13px;font-weight:600;letter-spacing:.02em;line-height:1.1;box-shadow:0 0 0 1px rgba(17,17,17,.08),0 10px 30px -8px rgba(17,17,17,.45),0 0 24px rgba(17,17,17,.18);transition:transform .25s ease,box-shadow .25s ease}
+.store:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(17,17,17,.1),0 16px 36px -8px rgba(17,17,17,.55),0 0 34px rgba(17,17,17,.26)}
+.store small{display:block;font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.65}
+.store svg{width:22px;height:22px;fill:currentColor}
+.phone-wrap{display:flex;justify-content:center}
+.phone{width:min(320px,82vw);aspect-ratio:9/19;border-radius:46px;background:#0b0b0b;padding:12px;box-shadow:0 40px 90px -30px rgba(0,0,0,.45),0 0 0 1px rgba(0,0,0,.6),inset 0 0 0 2px #2b2b2b;position:relative;transform:rotate(-3deg);transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.app:hover .phone{transform:rotate(0)}
+.screen{background:#121212;border-radius:36px;height:100%;color:#fff;padding:22px 18px;display:flex;flex-direction:column;gap:14px;overflow:hidden;font-size:12px}
+.screen .notch{width:96px;height:26px;background:#0b0b0b;border-radius:999px;margin:-6px auto 2px}
+.screen .top{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#8d8d89;font-weight:600}
+.screen .big{font-size:24px;font-weight:300;letter-spacing:-.03em;line-height:1}
+.screen .big b{font-weight:700}
+.days{display:flex;gap:6px}
+.days span{flex:1;text-align:center;font-size:10px;padding:8px 0;border-radius:10px;background:#1c1c1c;color:#9b9b97}
+.days span.on{background:#fff;color:#111;font-weight:700}
+.sess{display:grid;gap:8px}
+.s{--c:#fff;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;background:#1a1a1a;border-radius:14px;padding:11px 12px;border-left:2px solid var(--c)}
+.s .t{font-weight:700;font-size:12px;font-variant-numeric:tabular-nums}
+.s .n{font-size:11px;color:#dcdcd8} .s .n small{display:block;color:#8d8d89;font-size:9px;letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+.s .b{font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;background:#fff;color:#111;border-radius:999px;padding:7px 10px}
+.s .b.wait{background:transparent;color:#8d8d89;border:1px solid #333}
+.tabbar{margin-top:auto;display:flex;justify-content:space-around;padding-top:10px;border-top:1px solid #262626;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#8d8d89}
+.tabbar span.on{color:#fff}
+@media (min-width:900px){.app-grid{grid-template-columns:1fr 1fr}}
+
+/* MEMBERS */
+.members{padding-block:clamp(72px,10vw,140px);display:grid;gap:36px}
+.members .head{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:end}
+.members h2{font-size:clamp(34px,6vw,72px);font-weight:300;letter-spacing:-.04em;line-height:.98}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.quote{display:grid;gap:26px;min-height:260px}
+.quote blockquote{margin:0;font-family:var(--serif);font-size:clamp(28px,5.6vw,58px);line-height:1.12;letter-spacing:-.01em;max-width:none;text-wrap:pretty}
+.quote blockquote::before{content:"\201C"}.quote blockquote::after{content:"\201D"}
+.who{display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.who .dot{width:10px;height:10px}
+.who small{color:var(--grey);font-weight:500}
+.qnav{display:flex;gap:10px;align-items:center}
+.qnav button{width:48px;height:48px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:.25s}
+.qnav button:hover{background:var(--black);color:var(--white);border-color:var(--black)}
+.qnav .count{font-size:12px;letter-spacing:.14em;color:var(--grey);font-variant-numeric:tabular-nums;margin-left:8px}
+.fade{animation:fade .5s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* OFFERS */
+.offers{background:var(--black);color:var(--white);padding-block:clamp(72px,10vw,140px)}
+.offers .head{display:grid;gap:16px;padding-bottom:40px}
+.offers h2{font-size:clamp(34px,6vw,72px);font-weight:300;letter-spacing:-.04em;line-height:.98;}
+.offers p.lead{max-width:48ch;color:rgba(255,255,255,.72);font-size:16px}
+.ogrid{display:grid;gap:0;border-top:1px solid var(--line-dark)}
+.offer{--c:#fff;display:grid;gap:18px;padding:30px 0;border-bottom:1px solid var(--line-dark);position:relative}
+.offer .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px}
+.offer .k::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.offer h3{font-size:clamp(28px,5vw,40px);font-weight:300;letter-spacing:-.03em;line-height:1.02}
+.offer h3 .em{font-size:1.05em}
+.offer p{color:rgba(255,255,255,.72);max-width:40ch;font-size:15px}
+.offer ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:13px;color:rgba(255,255,255,.85)}
+.offer li{display:flex;gap:10px;align-items:baseline}.offer li::before{content:"";width:12px;height:1px;background:var(--c);flex:none;transform:translateY(-4px)}
+.offer .btn{justify-self:start;margin-top:4px}
+.offer.feature{background:var(--white);color:var(--black);padding:30px var(--gutter);margin-inline:calc(var(--gutter) * -1)}
+.offer.feature p,.offer.feature ul{color:#3a3a38}
+.offer.feature li::before{background:var(--black)}
+.offer.feature .btn{background:var(--black);color:var(--white)}
+@media (min-width:900px){.ogrid{grid-template-columns:repeat(3,1fr)}.offer{padding:40px 32px;border-right:1px solid var(--line-dark)}.offer:first-child{padding-left:0}.offer:last-child{border-right:0;padding-right:0}.offer.feature{margin:0;padding:40px 32px;border-right:0}}
+
+/* SOCIAL */
+.social{background:var(--paper);padding-block:clamp(64px,8vw,110px);display:grid;gap:30px}
+.social .head{display:flex;flex-wrap:wrap;gap:16px 30px;justify-content:space-between;align-items:end}
+.social h2{font-size:clamp(30px,5vw,56px);font-weight:300;letter-spacing:-.04em;line-height:1}
+.handles{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.handles a{display:inline-flex;align-items:center;gap:8px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.tiles a{--c:#111;position:relative;aspect-ratio:1;overflow:hidden;background:#222}
+.tiles img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .6s ease,transform 1s ease}
+.tiles a:hover img{filter:grayscale(0);transform:scale(1.05)}
+.tiles a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--c);transform:scaleX(0);transform-origin:left;transition:transform .5s ease}
+.tiles a:hover::after{transform:none}
+@media (min-width:900px){.tiles{grid-template-columns:repeat(6,1fr)}}
+
+/* CTA */
+.cta{position:relative;background:var(--black);color:var(--white);overflow:hidden;isolation:isolate;padding-block:clamp(90px,14vw,190px)}
+.cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:grayscale(1) brightness(.42);z-index:-1}
+.cta-inner{display:grid;gap:30px;justify-items:start}
+.cta h2{font-size:clamp(48px,11vw,132px);font-weight:300;letter-spacing:-.045em;line-height:.92}
+.cta .btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* FOOTER */
+footer{background:var(--black);color:var(--white);border-top:1px solid var(--line-dark);padding-block:56px 32px;display:grid;gap:44px}
+.fgrid{display:grid;gap:34px}
+.fcol{display:grid;gap:12px;font-size:13px;color:#b9b9b4;align-content:start}
+.fcol h4{margin:0;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fff;font-weight:600}
+.fcol a:hover{color:#fff}
+.fcol a{display:inline-flex;align-items:center;gap:8px}
+.news{display:grid;gap:14px}
+.news form{display:flex;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:6px;gap:10px}
+.news input{flex:1;min-width:0;background:none;border:0;color:#fff;font:inherit;font-size:14px;padding:8px 0;outline:none}
+.news input::placeholder{color:#7d7d79}
+.news button{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.news .ok{font-size:12px;color:#b9b9b4}
+.fbot{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7d7d79;padding-top:24px;border-top:1px solid var(--line-dark)}
+.fbot .logo{color:#fff}
+@media (min-width:900px){.fgrid{grid-template-columns:1.4fr 1fr 1fr 1.4fr}}
+
+/* reveal */
+.r{opacity:1;transform:none}
+@media (prefers-reduced-motion:no-preference){.r{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}.r.in{opacity:1;transform:none}}
+/* mobile division carousel */
+@media (max-width:899px){
+  .cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 var(--gutter) 0;gap:10px;border-top:0}
+  .cards::-webkit-scrollbar{display:none}
+  .card{flex:0 0 86%;min-height:74svh;min-height:74vh;scroll-snap-align:start;border:0;border-radius:18px}
+  .card-top,.card-body{padding-inline:22px}
+  .card::after{bottom:0;border-radius:0 0 18px 18px}
+  .swipe{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:600;padding:16px var(--gutter) 34px}
+  .swipe i{display:none}
+}
+@media (min-width:900px){.swipe{display:none}}
+
+
+
+/* ---- mobile compaction ---- */
+@media (max-width:899px){
+  .hero{min-height:76svh;min-height:76vh}
+  .hero-inner{gap:22px}
+  .hero-head{gap:22px}
+  .hero-sub{font-size:15px}
+  .hero-ctas{flex-direction:column;gap:10px}
+  .hero-ctas .btn{width:100%}
+  .member{justify-content:center;width:100%;margin-top:0;padding:12px 0 0;font-size:11px;color:rgba(255,255,255,.7)}
+  .hero-row p{display:none}
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .strip div{padding:16px 6px;border-top:1px solid var(--line);border-right:1px solid var(--line);text-align:center}
+  .strip div:last-child{border-right:0}
+  .strip strong{font-size:24px}
+  .strip small{font-size:9px;letter-spacing:.12em;margin-top:6px}
+  .intro,.studios,.members,.social,.faq{padding-block:52px}
+  .how,.app,.offers,.divisions{padding-block:52px}
+  .divisions{padding-bottom:0}
+  .intro{gap:22px}
+  .intro h2{font-size:clamp(28px,7.4vw,40px)}
+  .intro-col{font-size:15px;gap:14px}
+  .intro-col p:nth-child(2){display:none}
+  /* how: carousel */
+  .how .head{padding-bottom:22px}
+  .steps{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:10px;border-top:0;margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter)}
+  .steps::-webkit-scrollbar{display:none}
+  .step{flex:0 0 78%;scroll-snap-align:start;grid-template-columns:1fr;gap:10px;padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--white)}
+  .step .n{font-size:64px}
+  .step h3{font-size:21px}
+  .step p{font-size:14px;margin-top:6px}
+  /* divisions */
+  .card{min-height:60svh;min-height:60vh}
+  .card h3{font-size:clamp(36px,9vw,52px)}
+  .card p{font-size:14px;max-width:32ch}
+  .classes span{padding:5px 9px;font-size:10px}
+  .swipe{padding:14px var(--gutter) 24px}
+  /* studios */
+  .studios{gap:22px}
+  .filters{gap:6px}
+  .chip{height:34px;padding:0 13px;font-size:11px}
+  .near{height:34px;font-size:11px}
+  .near-msg{width:100%;margin:2px 0 0}
+  .studio{padding:14px 0;gap:3px 12px}
+  .studio h3{font-size:22px}
+  .studio address{font-size:13px}
+  .studio .acts a.primary{padding:9px 13px;font-size:10px}
+  .studio .acts a.secondary{padding:6px 2px;font-size:10px}
+  .studio:nth-child(n+4).over{display:none}
+  .more{padding-top:14px}
+  /* app */
+  .app-grid{gap:26px}
+  .app h2{font-size:clamp(30px,8vw,44px)}
+  .app p{font-size:15px}
+  .phone{width:min(250px,70vw);transform:none;border-radius:38px;padding:9px}
+  .screen{border-radius:30px;padding:16px 14px;gap:10px;font-size:11px}
+  .screen .big{font-size:20px}
+  .sess .s:nth-child(n+4){display:none}
+  /* members */
+  .members{gap:22px}
+  .quote{min-height:0;gap:18px}
+  .quote blockquote{font-size:clamp(24px,6.4vw,32px)}
+  /* offers: carousel */
+  .offers .head{padding-bottom:22px}
+  .offers p.lead{font-size:14px}
+  .ogrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:10px;border-top:0;margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter)}
+  .ogrid::-webkit-scrollbar{display:none}
+  .offer{flex:0 0 82%;scroll-snap-align:start;padding:22px;border:1px solid var(--line-dark);border-radius:16px;gap:12px}
+  .offer.feature{margin:0;padding:22px;border-color:var(--white)}
+  .offer h3{font-size:26px}
+  .offer p{font-size:14px}
+  .offer ul{font-size:12px;gap:6px}
+  .offer .btn{height:44px;padding:0 20px;font-size:12px}
+  /* social */
+  .social{gap:18px}
+  .handles{font-size:11px;gap:6px 14px}
+  /* faq */
+  .faq{gap:18px}
+  .faq summary{padding:14px 0;font-size:16px}
+  .faq details p{font-size:14px;padding-bottom:16px}
+  .faq details:nth-child(n+5){display:none}
+  /* cta */
+  .cta{padding-block:70px}
+  .cta h2{font-size:clamp(44px,12vw,64px)}
+  /* footer compact */
+  footer{padding-block:36px 24px;gap:22px}
+  footer{padding-bottom:calc(24px + 70px + env(safe-area-inset-bottom,0px))}
+  .fgrid{gap:18px;grid-template-columns:1fr 1fr}
+  .fcol:first-child,.fcol.news{grid-column:1/-1}
+  .fcol{gap:7px;font-size:12px}
+  .fcol:first-child p:first-of-type{display:none}
+  .fcol h4{font-size:10px}
+  .news p{display:none}
+  .fbot{padding-top:16px;font-size:10px;gap:8px 16px}
+}
+/* division colours override component defaults */
+.c-reformer{--c:var(--reformer)} .c-performance{--c:var(--performance)} .c-training{--c:var(--training)} .c-all{--c:#fff}
+.card::after{width:100%}
+/* mobile: all copy runs full width */
+@media (max-width:899px){
+  .intro h2,.divisions h2,.studios h2,.app h2,.members h2,.offers h2,.social h2,.faq h2,.cta h2,.how h2{max-width:none}
+  .intro-col,.hero-row p,.card p,.app p,.offers p.lead,.offer p,.step p,.faq details p,.quote blockquote,.fcol p{max-width:none}
+}
+
+/* real app screen */
+.screen.app-real{background:#fff;color:#1d1d1f;padding:0;gap:0;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif}
+.app-real .notch{position:absolute;left:50%;transform:translateX(-50%);top:10px;z-index:2}
+.app-real .ah{background:#000;color:#fff;padding:44px 16px 10px;display:flex;align-items:center;gap:8px;font-size:17px}
+.app-real .ah b{font-weight:700;flex:1}
+.app-real .ah .pin{width:12px;height:12px;border:2px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);margin-right:4px}
+.app-real .ah .ic{font-size:16px;opacity:.9}
+.app-real .atabs{background:#000;color:#fff;padding:6px 16px 14px;display:flex;gap:22px;font-size:14px}
+.app-real .atabs span{opacity:.5}.app-real .atabs span.on{opacity:1}
+.app-real .abody{flex:1;overflow:hidden;padding:12px 10px 0;background:#fff}
+.app-real .adays{display:flex;justify-content:space-between;margin-bottom:12px}
+.app-real .adays span{width:30px;height:30px;border:1px solid #bbb;border-radius:50%;display:grid;place-items:center;font-size:12px;position:relative;color:#1d1d1f}
+.app-real .adays span small{position:absolute;top:33px;font-size:8px;color:#888}
+.app-real .adays span.on{background:#3a3b3f;color:#fff;border-color:#3a3b3f}
+.app-real .adays span.dim{opacity:.35}
+.app-real .adate{font-weight:700;font-size:13px;margin:16px 0 8px}
+.app-real .acard{--c:#ddd;display:grid;grid-template-columns:auto 1fr;gap:8px;background:#fff;border:1px solid #ececec;border-left:3px solid var(--c);border-radius:8px;padding:9px 10px;margin-bottom:8px;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.app-real .al{display:grid;gap:2px;font-size:9px;color:#333}.app-real .al b{font-size:11px;font-variant-numeric:tabular-nums}
+.app-real .ar{display:grid;gap:3px;min-width:0}.app-real .ar b{font-size:10.5px;line-height:1.2}.app-real .ar span{font-size:9px;color:#555;line-height:1.3}
+.app-real .abar{background:#fff;border-top:1px solid #e6e6e6;display:flex;justify-content:space-around;padding:10px 6px 14px;font-size:8px;color:#444}
+.app-real .abar span.on{background:#e8e8e8;border-radius:8px;padding:4px 10px;font-weight:600}
+@media (max-width:899px){.sess .s:nth-child(n+4){display:none}.app-real .acard:nth-child(n+6){display:none}}
+
+/* mobile menu divisions group */
+.mgroup{border-bottom:1px solid var(--line-dark)}
+.menu nav .mgroup .mparent{border-bottom:0!important;display:flex;justify-content:space-between;align-items:center}
+.mgroup .chev{font-size:.5em;opacity:.6;margin-right:6px;transform:translateY(-4px)}
+.msub{display:grid;gap:0;padding:0 0 16px 6px}
+.menu nav .msub a{font-size:clamp(18px,4.8vw,22px);font-weight:400;letter-spacing:-.015em;line-height:1.2;padding:7px 0;border-bottom:0!important;display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.88)}
+.msub a .dot{width:10px;height:10px}
+@media (max-width:899px){.stores{justify-content:center}.app-grid{gap:34px}}
+body.menu-open .nav .logo{transition:opacity .25s ease}
+body.menu-open.menu-scrolled .nav .logo{opacity:0;pointer-events:none}
+body.menu-open.menu-scrolled .nav{background:linear-gradient(180deg,var(--black) 55%,rgba(17,17,17,0))}
+.nav:not(.solid):has(.has-mega:hover),.nav:not(.solid):has(.has-mega:focus-within){mix-blend-mode:normal}
+.screen{position:relative}
+.splash{position:absolute;inset:0;z-index:3;border-radius:inherit;overflow:hidden;background:#111;transition:opacity .15s linear}
+.splash img{width:100%;height:100%;object-fit:cover;display:block}
+@media (prefers-reduced-motion:reduce){.splash{display:none}}
+.menu{visibility:hidden;transition:transform .5s cubic-bezier(.76,0,.24,1),visibility 0s .5s}
+body.menu-open .menu{visibility:visible;transition:transform .5s cubic-bezier(.76,0,.24,1),visibility 0s}
+@media (min-width:900px){.menu{display:none}}
+.mgroup .msub{overflow:hidden;max-height:600px;transition:max-height .4s ease,opacity .3s ease,padding .3s ease}
+.mgroup.closed .msub{max-height:0;opacity:0;padding-bottom:0}
+.mgroup .chev{transition:transform .3s ease}
+.mgroup.closed .chev{transform:translateY(-4px) rotate(180deg)}
+</style>
+
+<a class="skip" href="#top">Skip to content</a>
+<header class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="ToneLAB home"><span>Tone</span><b>LAB</b></a>
+  <nav class="nav-links" aria-label="Primary">
+    <span class="has-mega"><a href="#divisions" aria-haspopup="true">Divisions</a>
+      <div class="mega"><div class="mega-in">
+        <div class="mega-col c-reformer"><span class="mk">Reformer</span><a href="https://tonelabs.com.au/reformer-classes/">ToneSTRONG</a><a href="https://tonelabs.com.au/reformer-classes/">ToneFLOW</a><a href="https://tonelabs.com.au/reformer-classes/">ToneCORE</a><a href="https://tonelabs.com.au/reformer-classes/">ToneENDURE</a><a href="https://tonelabs.com.au/reformer-classes/">ToneCONTROL</a><a class="all" href="https://tonelabs.com.au/reformer-classes/">All Reformer classes →</a></div>
+        <div class="mega-col c-performance"><span class="mk">Performance</span><a href="https://tonelabs.com.au/performance-classes/">Strength</a><a href="https://tonelabs.com.au/performance-classes/">Conditioning</a><a href="https://tonelabs.com.au/performance-classes/">Programmed blocks</a><a class="all" href="https://tonelabs.com.au/performance-classes/">All Performance classes →</a></div>
+        <div class="mega-col c-training"><span class="mk">Training</span><a href="https://tonelabs.com.au/training-classes/">HIIT</a><a href="https://tonelabs.com.au/training-classes/">Interval Weight Training</a><a href="https://tonelabs.com.au/training-classes/">Full body</a><a class="all" href="https://tonelabs.com.au/training-classes/">All Training classes →</a></div>
+      </div></div></span><span class="has-mega"><a href="#studios" aria-haspopup="true">Locations</a>
+      <div class="mega"><div class="mega-in">
+        <div class="mega-col c-reformer"><span class="mk">Reformer</span><a href="https://tonelabs.com.au/locations/">The Junction</a><a href="https://tonelabs.com.au/locations/">Warners Bay</a><a href="https://tonelabs.com.au/locations/">Lambton</a></div>
+        <div class="mega-col c-performance"><span class="mk">Performance</span><a href="https://tonelabs.com.au/locations/">Hamilton North</a><a href="https://tonelabs.com.au/locations/">Warners Bay</a></div>
+        <div class="mega-col c-training"><span class="mk">Training</span><a href="https://tonelabs.com.au/locations/">Newcastle West</a><a href="https://tonelabs.com.au/locations/">Wallsend</a><a href="https://tonelabs.com.au/locations/">Toronto</a><a href="https://tonelabs.com.au/locations/">Raymond Terrace</a><a class="all" href="#studios">Find your nearest studio →</a></div>
+      </div></div></span><a href="#app">App</a><span class="has-mega"><a href="#offers" aria-haspopup="true">Intro Offer</a>
+      <div class="mega mega-sm"><div class="mega-in">
+        <div class="mega-col c-training"><span class="mk">Training</span><a href="#offers">Two weeks of Training</a></div>
+        <div class="mega-col c-performance"><span class="mk">Performance</span><a href="#offers">Two weeks of Performance</a></div>
+        <div class="mega-col c-all"><span class="mk">All Access</span><a href="#offers">Every studio, every discipline</a></div>
+      </div></div></span><a href="https://tonelabs.com.au/about-us/">About</a><a href="https://tonelabs.com.au/join-us/">Join the team</a><a href="https://tonelabs.com.au/contact-us/">Contact us</a>
+  </nav>
+  <a class="btn nav-cta" href="#app">Book a class</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
+</header>
+<div class="menu" id="menu" aria-hidden="true">
+  <nav>
+    <div class="mgroup">
+      <a href="#divisions" class="mparent">Divisions <span class="chev">&#8964;</span></a>
+      <div class="msub">
+        <a href="https://tonelabs.com.au/reformer-classes/" class="c-reformer"><span class="dot"></span>Reformer</a>
+        <a href="https://tonelabs.com.au/performance-classes/" class="c-performance"><span class="dot"></span>Performance</a>
+        <a href="https://tonelabs.com.au/training-classes/" class="c-training"><span class="dot"></span>Training</a>
+      </div>
+    </div>
+    <div class="mgroup">
+      <a href="#studios" class="mparent">Locations <span class="chev">&#8964;</span></a>
+      <div class="msub">
+        <a href="https://tonelabs.com.au/locations/" class="c-reformer"><span class="dot"></span>The Junction</a>
+        <a href="https://tonelabs.com.au/locations/" class="c-reformer"><span class="dot"></span>Warners Bay</a>
+        <a href="https://tonelabs.com.au/locations/" class="c-reformer"><span class="dot"></span>Lambton</a>
+        <a href="https://tonelabs.com.au/locations/" class="c-performance"><span class="dot"></span>Hamilton North</a>
+        <a href="https://tonelabs.com.au/locations/" class="c-performance"><span class="dot"></span>Warners Bay</a>
+        <a href="https://tonelabs.com.au/locations/" class="c-training"><span class="dot"></span>Newcastle West</a>
+        <a href="https://tonelabs.com.au/locations/" class="c-training"><span class="dot"></span>Wallsend</a>
+        <a href="https://tonelabs.com.au/locations/" class="c-training"><span class="dot"></span>Toronto</a>
+        <a href="https://tonelabs.com.au/locations/" class="c-training"><span class="dot"></span>Raymond Terrace</a>
+      </div>
+    </div>
+    <a href="https://tonelabs.com.au/locations/">Timetable</a>
+    <div class="mgroup">
+      <a href="#offers" class="mparent">Intro Offer <span class="chev">&#8964;</span></a>
+      <div class="msub">
+        <a href="#offers" class="c-training"><span class="dot"></span>Training</a>
+        <a href="#offers" class="c-performance"><span class="dot"></span>Performance</a>
+        <a href="#offers" class="c-all"><span class="dot"></span>All Access</a>
+      </div>
+    </div>
+    <a href="https://tonelabs.com.au/about-us/">About</a>
+    <a href="https://tonelabs.com.au/join-us/">Join the team</a>
+    <a href="https://tonelabs.com.au/contact-us/">Contact us</a>
+  </nav>
+  <div class="menu-foot">
+    <a class="btn light" href="#app">Book a class</a>
+    <a href="#app">Member? Open the app →</a>
+    <span>Newcastle · Lake Macquarie · Port Stephens</span>
+  </div>
+</div>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-media" id="heroMedia" data-yt="2x2novTuEv0" data-yt-mobile="ZrJpPce-nXw"><video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="img/hero-poster.jpg" aria-hidden="true"></video></div>
+  <div class="hero-inner">
+    <div class="divs">
+      <span class="c-reformer"><i class="dot"></i>Reformer</span>
+      <span class="c-performance"><i class="dot"></i>Performance</span>
+      <span class="c-training"><i class="dot"></i>Training</span>
+    </div>
+    <div class="hero-head"><h1>Move with <span class="em">purpose.</span></h1>
+    <h2 class="hero-sub">Reformer Pilates, strength and conditioning, and HIIT studios across Newcastle, Lake Macquarie and Port Stephens.</h2></div>
+    <div class="hero-row">
+      <div class="hero-ctas">
+        <a class="btn light" href="#studios">Find your studio</a>
+        <a class="btn ghost-light" href="#app">Book a class <span class="arrow">→</span></a>
+        <a class="member" href="#app">Already a member? Open the app <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="strip" aria-label="ToneLAB at a glance">
+  <div><strong class="tally" data-to="3">3</strong><small>Disciplines</small></div>
+  <div><strong class="tally" data-to="9">9</strong><small>Studios</small></div>
+  <div><strong class="tally" data-to="400" data-suffix="+">400+</strong><small>Classes every week</small></div>
+</section>
+
+<section class="intro wrap">
+  <div class="r">
+    <p class="eyebrow">What is ToneLAB</p>
+    <h2 style="margin-top:22px">Not a gym. A collective of <span class="em">studios</span> that take training seriously.</h2>
+  </div>
+  <div class="intro-col r">
+    <p>ToneLAB is a Newcastle-owned fitness brand offering three distinct ways to train: Reformer Pilates, Performance strength and conditioning, and Training built on HIIT and Interval Weight Training.</p>
+    <p>Every studio, session and coach is driven by one belief: everyone deserves purposeful, high-quality training, whatever their background, ability or stage of life. Welcoming, focused and community-led.</p>
+    <a class="btn ghost" href="https://tonelabs.com.au/about-us/">New to ToneLAB? <span class="arrow">→</span></a>
+  </div>
+</section>
+
+
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="head r"><p class="eyebrow">How it works</p><h2>Three steps to your <span class="em">first class.</span></h2></div>
+    <div class="steps r">
+      <div class="step"><span class="n">1</span><div><h3>Pick your location</h3><p>Nine studios across Newcastle, Lake Macquarie and Port Stephens. Filter by discipline, find the closest, check the timetable.</p><a href="#studios">Find a location <span class="arrow">→</span></a></div></div>
+      <div class="step"><span class="n">2</span><div><h3>Claim an intro offer</h3><p>Two weeks at a Training or Performance studio, or go All Access from day one. No lock-in while you find your fit.</p><a href="#offers">See intro offers <span class="arrow">→</span></a></div></div>
+      <div class="step"><span class="n">3</span><div><h3>Book in the app</h3><p>Download ToneLAB, pick a class, walk in. Your membership works at every studio, every discipline.</p><a href="#app">Get the app <span class="arrow">→</span></a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="divisions" id="divisions">
+  <div class="head wrap r">
+    <p class="eyebrow">Three disciplines</p>
+    <h2>Pick your <span class="em">discipline.</span><br>Or train across all three.</h2>
+  </div>
+  <div class="cards">
+    <a class="card c-reformer r" href="https://tonelabs.com.au/reformer-classes/">
+      <figure><img src="img/reformer.jpg" alt="" loading="lazy"></figure>
+      <div class="card-top"><span class="tag">Reformer</span><span>3 studios</span></div>
+      <div class="card-body">
+        <h3>Tone<b>LAB</b><br>Reformer</h3>
+        <p>Strength meets control. Low-impact, high-precision Reformer Pilates that builds strength, flexibility and postural control.</p>
+        <div class="classes"><span>ToneSTRONG</span><span>ToneFLOW</span><span>ToneCORE</span><span>ToneENDURE</span><span>ToneCONTROL</span></div>
+        <span class="card-link">Explore Reformer <span class="arrow">→</span></span>
+      </div>
+    </a>
+    <a class="card c-performance r" href="https://tonelabs.com.au/performance-classes/">
+      <figure><img src="img/performance.jpg" alt="" loading="lazy"></figure>
+      <div class="card-top"><span class="tag">Performance</span><span>2 studios</span></div>
+      <div class="card-body">
+        <h3>Tone<b>LAB</b><br>Performance</h3>
+        <p>Structured strength and conditioning programming. Build muscle, improve power and push to new physical limits with a coach on the floor.</p>
+        <div class="classes"><span>Strength</span><span>Conditioning</span><span>Programming</span></div>
+        <span class="card-link">Explore Performance <span class="arrow">→</span></span>
+      </div>
+    </a>
+    <a class="card c-training r" href="https://tonelabs.com.au/training-classes/">
+      <figure><img src="img/training.jpg" alt="" loading="lazy"></figure>
+      <div class="card-top"><span class="tag">Training</span><span>4 studios</span></div>
+      <div class="card-body">
+        <h3>Tone<b>LAB</b><br>Training</h3>
+        <p>HIIT and Interval Weight Training. Time-based, functional, full-body sessions designed to burn fat, build muscle and lift your fitness.</p>
+        <div class="classes"><span>HIIT</span><span>IWT</span><span>Full body</span></div>
+        <span class="card-link">Explore Training <span class="arrow">→</span></span>
+      </div>
+    </a>
+  </div>
+  <p class="swipe">Swipe for Performance and Training →</p>
+</section>
+
+<section class="studios wrap" id="studios">
+  <div class="head r">
+    <p class="eyebrow">Find your location</p>
+    <h2>Nine studios. <span class="em">One</span> near you.</h2>
+  </div>
+  <div class="filter-row r">
+    <div class="filters" id="areaFilters">
+      <span class="lbl">Area</span>
+      <button class="near" id="nearBtn" type="button">Nearest to me</button><span class="near-msg" id="nearMsg"></span>
+      <button class="chip on" data-area="all">All</button>
+      <button class="chip" data-area="newcastle">Newcastle</button>
+      <button class="chip" data-area="lakemac">Lake Macquarie</button>
+      <button class="chip" data-area="portstephens">Port Stephens</button>
+    </div>
+    <div class="filters" id="divFilters">
+      <span class="lbl">Discipline</span>
+      <button class="chip on" data-div="all">All</button>
+      <button class="chip c-reformer" data-div="reformer"><span class="dot"></span>Reformer</button>
+      <button class="chip c-performance" data-div="performance"><span class="dot"></span>Performance</button>
+      <button class="chip c-training" data-div="training"><span class="dot"></span>Training</button>
+    </div>
+  </div>
+  <div class="list r" id="studioList">
+    <div class="studio c-reformer" data-area="newcastle" data-lat="-32.9375" data-lng="151.7760" data-div="reformer"><span class="where">Reformer</span><h3>The <b>Junction</b></h3><address><span class="dist"></span> 11 Kenrick Street, The Junction NSW 2291</address><div class="acts"><a class="primary" href="https://tonelabs.com.au/locations/">Timetable</a><a class="secondary" href="https://www.google.com/maps/search/?api=1&query=11+Kenrick+Street+The+Junction+NSW+2291">Directions <span class="arrow">↗</span></a></div></div>
+    <div class="studio c-reformer" data-area="lakemac" data-lat="-32.9720" data-lng="151.6530" data-div="reformer"><span class="where">Reformer</span><h3>Warners <b>Bay</b></h3><address><span class="dist"></span> 7 King Street, Warners Bay NSW 2282</address><div class="acts"><a class="primary" href="https://tonelabs.com.au/locations/">Timetable</a><a class="secondary" href="https://www.google.com/maps/search/?api=1&query=7+King+Street+Warners+Bay+NSW+2282">Directions <span class="arrow">↗</span></a></div></div>
+    <div class="studio c-reformer" data-area="newcastle" data-lat="-32.9120" data-lng="151.7110" data-div="reformer"><span class="where">Reformer</span><h3><b>Lambton</b></h3><address><span class="dist"></span> 64 Orlando Road, Lambton NSW 2299</address><div class="acts"><a class="primary" href="https://tonelabs.com.au/locations/">Timetable</a><a class="secondary" href="https://www.google.com/maps/search/?api=1&query=64+Orlando+Road+Lambton+NSW+2299">Directions <span class="arrow">↗</span></a></div></div>
+    <div class="studio over c-performance" data-area="newcastle" data-lat="-32.9170" data-lng="151.7390" data-div="performance"><span class="where">Performance</span><h3>Hamilton <b>North</b></h3><address><span class="dist"></span> 54 Clyde Street, Hamilton North NSW 2292</address><div class="acts"><a class="primary" href="https://tonelabs.com.au/locations/">Timetable</a><a class="secondary" href="https://www.google.com/maps/search/?api=1&query=54+Clyde+Street+Hamilton+North+NSW+2292">Directions <span class="arrow">↗</span></a></div></div>
+    <div class="studio over c-performance" data-area="lakemac" data-lat="-32.9590" data-lng="151.6570" data-div="performance"><span class="where">Performance</span><h3>Warners <b>Bay</b></h3><address><span class="dist"></span> 339 Hillsborough Road, Warners Bay NSW 2282</address><div class="acts"><a class="primary" href="https://tonelabs.com.au/locations/">Timetable</a><a class="secondary" href="https://www.google.com/maps/search/?api=1&query=339+Hillsborough+Road+Warners+Bay+NSW+2282">Directions <span class="arrow">↗</span></a></div></div>
+    <div class="studio over c-training" data-area="newcastle" data-lat="-32.9270" data-lng="151.7650" data-div="training"><span class="where">Training</span><h3><b>Newcastle</b> West</h3><address><span class="dist"></span> 125 Bull Street, Newcastle West NSW 2302</address><div class="acts"><a class="primary" href="https://tonelabs.com.au/locations/">Timetable</a><a class="secondary" href="https://www.google.com/maps/search/?api=1&query=125+Bull+Street+Newcastle+West+NSW+2302">Directions <span class="arrow">↗</span></a></div></div>
+    <div class="studio over c-training" data-area="newcastle" data-lat="-32.8990" data-lng="151.6700" data-div="training"><span class="where">Training</span><h3><b>Wallsend</b></h3><address><span class="dist"></span> 96 Nelson Street, Wallsend NSW 2287</address><div class="acts"><a class="primary" href="https://tonelabs.com.au/locations/">Timetable</a><a class="secondary" href="https://www.google.com/maps/search/?api=1&query=96+Nelson+Street+Wallsend+NSW+2287">Directions <span class="arrow">↗</span></a></div></div>
+    <div class="studio over c-training" data-area="lakemac" data-lat="-33.0090" data-lng="151.5950" data-div="training"><span class="where">Training</span><h3><b>Toronto</b></h3><address><span class="dist"></span> 94 Excelsior Parade, Toronto NSW 2283</address><div class="acts"><a class="primary" href="https://tonelabs.com.au/locations/">Timetable</a><a class="secondary" href="https://www.google.com/maps/search/?api=1&query=94+Excelsior+Parade+Toronto+NSW+2283">Directions <span class="arrow">↗</span></a></div></div>
+    <div class="studio over c-training" data-area="portstephens" data-lat="-32.7620" data-lng="151.7430" data-div="training"><span class="where">Training</span><h3>Raymond <b>Terrace</b></h3><address><span class="dist"></span> 12 Carmichael Street, Raymond Terrace NSW 2324</address><div class="acts"><a class="primary" href="https://tonelabs.com.au/locations/">Timetable</a><a class="secondary" href="https://www.google.com/maps/search/?api=1&query=12+Carmichael+Street+Raymond+Terrace+NSW+2324">Directions <span class="arrow">↗</span></a></div></div>
+    <p class="empty" id="empty">No studio matches that combination yet. Try another area.</p>
+  </div>
+  <div class="more" id="more"><button class="btn ghost" type="button" id="moreBtn">Show all 9 studios</button></div>
+</section>
+
+<section class="app" id="app">
+  <div class="wrap app-grid">
+    <div class="app-copy r">
+      <p class="eyebrow">The ToneLAB app</p>
+      <h2>Find a class. <span class="em">Book it.</span> Walk in.</h2>
+      <p>Booking made easy. Download the ToneLAB app to find your local studio, see what's on today and lock in a spot in seconds. One membership, every studio.</p>
+      <div class="stores">
+        <a class="store" href="https://apps.apple.com/au/app/tonelabs/id6463212170"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.8 1.3 10.3.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.4.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.2zM13.9 4.8c.7-.9 1.2-2.1 1-3.3-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.2 1.2.1 2.4-.6 3.1-1.5z"/></svg><span><small>Download on the</small>App Store</span></a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.fitnessmobileapps.tonelab37230&hl=en_AU"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2 13.7 12 3.6 21.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1zm11.8 8.1L5.9 3.1l10.5 6.1-1 1.1zm0 3.4 1 1.1L5.9 20.9l9.5-7.2zm1.5-1.7 3.4 2c.8.5.8 1.5 0 2l-3.4 2-1.9-2.9 1.9-3.1z"/></svg><span><small>Get it on</small>Google Play</span></a>
+      </div>
+    </div>
+    <div class="phone-wrap r">
+      <div class="phone" aria-hidden="true">
+        <div class="screen app-real">
+          <div class="splash" id="appSplash"><img src="img/app-splash.jpg" alt=""></div>
+          <div class="notch"></div>
+          <div class="ah"><span class="pin"></span><b>ToneLABS</b><span class="ic">&#9783;</span></div>
+          <div class="atabs"><span class="on">Classes</span><span>Appointments</span></div>
+          <div class="abody">
+            <div class="adays"><span class="dim">3<small>Su</small></span><span>4<small>Today</small></span><span class="on">5<small>Tu</small></span><span>6<small>We</small></span><span>7<small>Th</small></span><span>8<small>Fr</small></span><span>9<small>Sa</small></span></div>
+            <div class="adate">Tuesday, November 5</div>
+            <div class="acard c-performance"><div class="al"><b>5:00 AM</b><span>AEDT</span><span>50 min</span></div><div class="ar"><b>PERFORM WBay: ENGAGE</b><span>Performance Warners Bay<br>7/339 Hillsborough Road, W…</span></div></div>
+            <div class="acard c-performance"><div class="al"><b>5:00 AM</b><span>AEDT</span><span>50 min</span></div><div class="ar"><b>PERFORM Hamilton: ENGAGE</b><span>Performance Hamilton 5/54 Clyde St, Hamilton North</span></div></div>
+            <div class="acard c-training"><div class="al"><b>5:00 AM</b><span>AEDT</span><span>45 min</span></div><div class="ar"><b>TLT NEWCASTLE: PARADISE</b><span>TL Training Newcastle 6/125 Bull St, Newcastle West 2302</span></div></div>
+            <div class="acard c-training"><div class="al"><b>5:00 AM</b><span>AEDT</span><span>45 min</span></div><div class="ar"><b>TLT WALLSEND: PARADISE</b><span>TL Wallsend 96 Nelson Street, Wallsend 2287</span></div></div>
+          </div>
+          <div class="abar"><span>Home</span><span class="on">Book</span><span>Buy</span><span>Profile</span><span>More</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="members wrap" id="members">
+  <div class="head r">
+    <div><p class="eyebrow">Our members</p><h2 style="margin-top:16px">Built for people who <span class="em">keep showing up.</span></h2></div>
+    <div class="tabs" id="qTabs">
+      <button class="chip on" data-q="all">All</button>
+      <button class="chip c-reformer" data-q="reformer"><span class="dot"></span>Reformer</button>
+      <button class="chip c-performance" data-q="performance"><span class="dot"></span>Performance</button>
+      <button class="chip c-training" data-q="training"><span class="dot"></span>Training</button>
+    </div>
+  </div>
+  <div class="quote r" id="quote">
+    <blockquote id="qText"></blockquote>
+    <div class="who"><span class="dot" id="qDot"></span><span id="qName"></span><small id="qWhere"></small></div>
+    <div class="qnav"><button id="qPrev" aria-label="Previous review">←</button><button id="qNext" aria-label="Next review">→</button><span class="count" id="qCount"></span></div>
+  </div>
+</section>
+
+<section class="offers" id="offers">
+  <div class="wrap">
+    <div class="head r">
+      <p class="eyebrow">Memberships &amp; intro offers</p>
+      <h2>Start with an <span class="em">intro offer.</span> Stay for the community.</h2>
+      <p class="lead">Try a studio before you commit. Every membership includes the app, class booking and the flexibility to train across locations.</p>
+    </div>
+    <div class="ogrid r">
+      <div class="offer c-training"><span class="k">Training intro</span><h3>Two weeks of <span class="em">Training</span></h3><p>Unlimited HIIT and IWT classes at any Training studio while you find your feet.</p><ul><li>Newcastle West, Wallsend, Toronto, Raymond Terrace</li><li>Coach-led, time-based sessions</li><li>No lock-in</li></ul><a class="btn light" href="https://tonelabs.com.au/">Claim offer</a></div>
+      <div class="offer feature"><span class="k">All Access</span><h3>Every studio. <span class="em">Every</span> discipline.</h3><p>One membership that moves with you: Reformer in the morning, Performance after work, Training on the weekend.</p><ul><li>All nine studios</li><li>Reformer, Performance and Training</li><li>Priority booking in the app</li></ul><a class="btn" href="https://tonelabs.com.au/">See All Access</a></div>
+      <div class="offer c-performance"><span class="k">Performance intro</span><h3>Two weeks of <span class="em">Performance</span></h3><p>Structured strength and conditioning with a coach on the floor, at Warners Bay or Hamilton North.</p><ul><li>Programmed blocks, not random workouts</li><li>Small groups</li><li>No lock-in</li></ul><a class="btn light" href="https://tonelabs.com.au/">Claim offer</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="social wrap" id="social">
+  <div class="head r">
+    <h2>Inside the <span class="em">studios.</span></h2>
+    <div class="handles">
+      <a class="c-reformer" href="https://www.instagram.com/tonelab.reformer/"><span class="dot"></span>@tonelab.reformer</a>
+      <a class="c-performance" href="https://www.instagram.com/tonelab.performance/"><span class="dot"></span>@tonelab.performance</a>
+      <a class="c-training" href="https://www.instagram.com/tonelab.training/"><span class="dot"></span>@tonelab.training</a>
+    </div>
+  </div>
+  <div class="tiles r">
+    <a class="c-reformer" href="https://www.instagram.com/tonelab.reformer/"><img src="img/ig-reformer-1.jpg" alt="Reformer class at ToneLAB" loading="lazy"></a>
+    <a class="c-performance" href="https://www.instagram.com/tonelab.performance/"><img src="img/ig-performance-1.jpg" alt="Performance floor at ToneLAB" loading="lazy"></a>
+    <a class="c-training" href="https://www.instagram.com/tonelab.training/"><img src="img/ig-training-1.jpg" alt="Training session at ToneLAB" loading="lazy"></a>
+    <a class="c-reformer" href="https://www.instagram.com/tonelab.reformer/"><img src="img/ig-reformer-2.jpg" alt="Reformer class at ToneLAB" loading="lazy"></a>
+    <a class="c-performance" href="https://www.instagram.com/tonelab.performance/"><img src="img/ig-performance-2.jpg" alt="Performance class at ToneLAB" loading="lazy"></a>
+    <a class="c-training" href="https://www.instagram.com/tonelab.training/"><img src="img/ig-training-2.jpg" alt="Training class at ToneLAB" loading="lazy"></a>
+  </div>
+</section>
+
+
+<section class="faq wrap" id="faq">
+  <div class="r"><p class="eyebrow">Good to know</p><h2 style="margin-top:16px">Questions, <span class="em">answered.</span></h2></div>
+  <div class="faq-list r">
+    <details><summary>Can I train at more than one studio?</summary><p>Yes. An All Access membership works at every ToneLAB studio across all three disciplines. Discipline-specific memberships cover every studio of that type.</p></details>
+    <details><summary>I've never done Reformer Pilates. Where do I start?</summary><p>ToneCONTROL and ToneREFORMER are the best first classes. Every session is instructor-led and scaled to your pace, so you don't need any experience.</p></details>
+    <details><summary>How do I book a class?</summary><p>Download the ToneLAB app, choose your studio and book straight from the timetable. You can also join a waitlist for full classes.</p></details>
+    <details><summary>Is there a lock-in contract?</summary><p>Intro offers have no lock-in. Membership terms vary by plan and are shown clearly before you sign up.</p></details>
+    <details><summary>Where are the studios?</summary><p>Nine studios across Newcastle (The Junction, Lambton, Hamilton North, Newcastle West, Wallsend), Lake Macquarie (Warners Bay, Toronto) and Port Stephens (Raymond Terrace).</p></details>
+  </div>
+</section>
+
+<section class="cta">
+  <img src="img/focus.jpg" alt="" loading="lazy">
+  <div class="wrap cta-inner r">
+    <p class="eyebrow">Ready when you are</p>
+    <h2>Your first class<br>is <span class="em">today.</span></h2>
+    <div class="btns"><a class="btn light" href="#app">Book a class</a><a class="btn ghost-light" href="https://tonelabs.com.au/join-us/">Join the team <span class="arrow">→</span></a></div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="fgrid">
+    <div class="fcol">
+      <a class="logo" href="#top" aria-label="ToneLAB" style="width:140px;color:#fff"><span>Tone</span><b>LAB</b></a>
+      <p>Newcastle-owned. Nine studios across Newcastle, Lake Macquarie and Port Stephens.</p>
+      <p>hq@tonelabs.com.au</p>
+    </div>
+    <div class="fcol"><h4>Train</h4><a class="c-reformer" href="https://tonelabs.com.au/reformer-classes/"><span class="dot"></span>Reformer</a><a class="c-performance" href="https://tonelabs.com.au/performance-classes/"><span class="dot"></span>Performance</a><a class="c-training" href="https://tonelabs.com.au/training-classes/"><span class="dot"></span>Training</a><a href="#studios">Locations</a><a href="#offers">Intro Offer</a></div>
+    <div class="fcol"><h4>ToneLAB</h4><a href="https://tonelabs.com.au/about-us/">About us</a><a href="https://tonelabs.com.au/join-us/">Join the team</a><a href="https://tonelabs.com.au/contact-us/">Contact us</a><a href="https://tonelabs.com.au/privacy-policy/">Privacy</a><a href="https://tonelabs.com.au/terms-conditions/">Terms</a></div>
+    <div class="fcol news"><h4>Stay in the loop</h4><p>Intro offers, new studios and challenge dates, straight to your inbox.</p><form id="newsForm"><label for="newsEmail" hidden>Email</label><input id="newsEmail" type="email" placeholder="Your email" required autocomplete="email"><button type="submit">Subscribe</button></form><p class="ok" id="newsOk" hidden>You're in. Welcome to ToneLAB.</p></div>
+  </div>
+  <div class="fbot"><span>ToneLAB © 2026</span><span>Designed by Studio Loock</span></div>
+</footer>
+
+<div class="stick" id="stick" aria-label="Quick actions"><a class="btn" href="#app">Book a class</a><a class="btn ghost" href="#studios">Find a studio</a></div>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"ToneLAB","url":"https://tonelabs.com.au/","email":"hq@tonelabs.com.au","sameAs":["https://www.instagram.com/tonelab.reformer/","https://www.instagram.com/tonelab.performance/","https://www.instagram.com/tonelab.training/"]},
+{"@type":"ExerciseGym","name":"ToneLAB Reformer The Junction","address":{"@type":"PostalAddress","streetAddress":"11 Kenrick Street","addressLocality":"The Junction","addressRegion":"NSW","postalCode":"2291","addressCountry":"AU"},"parentOrganization":{"@type":"Organization","name":"ToneLAB"}},
+{"@type":"ExerciseGym","name":"ToneLAB Reformer Warners Bay","address":{"@type":"PostalAddress","streetAddress":"7 King Street","addressLocality":"Warners Bay","addressRegion":"NSW","postalCode":"2282","addressCountry":"AU"}},
+{"@type":"ExerciseGym","name":"ToneLAB Reformer Lambton","address":{"@type":"PostalAddress","streetAddress":"64 Orlando Road","addressLocality":"Lambton","addressRegion":"NSW","postalCode":"2299","addressCountry":"AU"}},
+{"@type":"ExerciseGym","name":"ToneLAB Performance Hamilton North","address":{"@type":"PostalAddress","streetAddress":"54 Clyde Street","addressLocality":"Hamilton North","addressRegion":"NSW","postalCode":"2292","addressCountry":"AU"}},
+{"@type":"ExerciseGym","name":"ToneLAB Performance Warners Bay","address":{"@type":"PostalAddress","streetAddress":"339 Hillsborough Road","addressLocality":"Warners Bay","addressRegion":"NSW","postalCode":"2282","addressCountry":"AU"}},
+{"@type":"ExerciseGym","name":"ToneLAB Training Newcastle West","address":{"@type":"PostalAddress","streetAddress":"125 Bull Street","addressLocality":"Newcastle West","addressRegion":"NSW","postalCode":"2302","addressCountry":"AU"}},
+{"@type":"ExerciseGym","name":"ToneLAB Training Wallsend","address":{"@type":"PostalAddress","streetAddress":"96 Nelson Street","addressLocality":"Wallsend","addressRegion":"NSW","postalCode":"2287","addressCountry":"AU"}},
+{"@type":"ExerciseGym","name":"ToneLAB Training Toronto","address":{"@type":"PostalAddress","streetAddress":"94 Excelsior Parade","addressLocality":"Toronto","addressRegion":"NSW","postalCode":"2283","addressCountry":"AU"}},
+{"@type":"ExerciseGym","name":"ToneLAB Training Raymond Terrace","address":{"@type":"PostalAddress","streetAddress":"12 Carmichael Street","addressLocality":"Raymond Terrace","addressRegion":"NSW","postalCode":"2324","addressCountry":"AU"}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Can I train at more than one studio?","acceptedAnswer":{"@type":"Answer","text":"Yes. An All Access membership works at every ToneLAB studio across all three disciplines."}},
+{"@type":"Question","name":"How do I book a class?","acceptedAnswer":{"@type":"Answer","text":"Download the ToneLAB app, choose your studio and book from the timetable."}},
+{"@type":"Question","name":"Is there a lock-in contract?","acceptedAnswer":{"@type":"Answer","text":"Intro offers have no lock-in. Membership terms vary by plan."}}]}
+]}
+</script>
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  var stick=document.getElementById('stick');function onScroll(){var past=window.scrollY>window.innerHeight*.75;nav.classList.toggle('solid',past);stick.classList.toggle('show',past)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  menu.addEventListener('scroll',function(){document.body.classList.toggle('menu-scrolled',menu.scrollTop>12)},{passive:true});
+  burger.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');burger.setAttribute('aria-expanded',o);menu.setAttribute('aria-hidden',!o)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.body.classList.contains('menu-open')){burger.click()}});
+  menu.querySelectorAll('.mparent').forEach(function(pa){pa.addEventListener('click',function(e){e.preventDefault();var g=pa.parentElement;g.classList.toggle('closed');pa.setAttribute('aria-expanded',!g.classList.contains('closed'))})});
+  menu.querySelectorAll('a:not(.mparent)').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');burger.setAttribute('aria-expanded','false');menu.setAttribute('aria-hidden','true')})});
+
+  // hero video: portrait edit on phones, landscape crop on desktop
+  var hv=document.getElementById('heroVideo');
+  if(hv){var m=window.innerWidth<900;hv.poster=m?'img/hero-poster-m.jpg':'img/hero-poster.jpg';hv.src=m?'img/hero-m.mp4':'img/hero.mp4';hv.load();var pp=hv.play();if(pp&&pp.catch){pp.catch(function(){})}}
+
+  // hero sub tracks headline width
+  var h1=document.querySelector('.hero h1'),sub=document.querySelector('.hero-sub');
+  function fitSub(){if(!h1||!sub)return;
+    // scale headline to fill the content width exactly
+    if(window.innerWidth<900){var inner=document.querySelector('.hero-inner'),cs=getComputedStyle(inner);var avail=document.querySelector('.hero').clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);h1.style.fontSize='100px';var w=h1.scrollWidth;var fs=Math.floor(100*avail/w*100)/100;h1.style.fontSize=fs+'px';var g=0;while(h1.scrollWidth>avail&&g++<20){fs-=0.5;h1.style.fontSize=fs+'px'}sub.style.width='';return}
+    h1.style.fontSize='';sub.style.width=Math.ceil(h1.getBoundingClientRect().width)+'px'}
+  fitSub();window.addEventListener('resize',fitSub);if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fitSub)}
+
+  // stat counters: tally up once the strip scrolls into view (about 2.2s, eased)
+  var counters=document.querySelectorAll('.tally'),reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function runCount(el){var to=+el.dataset.to,suf=el.dataset.suffix||'',dur=2200,t0=null;function step(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/dur);var e=1-Math.pow(1-k,3);el.textContent=Math.round(to*e)+(k===1?suf:'');if(k<1)requestAnimationFrame(step)}requestAnimationFrame(step)}
+  if(counters.length&&!reduce&&'IntersectionObserver' in window){counters.forEach(function(el){el.textContent='0'});var co=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){runCount(e.target);co.unobserve(e.target)}})},{threshold:.6});counters.forEach(function(el){co.observe(el)})}
+
+  // app splash: fades into the Book screen as the phone scrolls up the page
+  var splash=document.getElementById('appSplash'),phoneEl=document.querySelector('.phone');
+  function splashScroll(){if(!splash||!phoneEl)return;var r=phoneEl.getBoundingClientRect(),vh=window.innerHeight;var start=vh*0.45,end=vh*0.15;var k=(start-r.top)/(start-end);k=Math.max(0,Math.min(1,k));splash.style.opacity=String(1-k);splash.style.pointerEvents=k>=1?'none':''}
+  splashScroll();window.addEventListener('scroll',splashScroll,{passive:true});window.addEventListener('resize',splashScroll);
+
+  // reveal
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.r').forEach(function(el){io.observe(el)})}else{document.querySelectorAll('.r').forEach(function(el){el.classList.add('in')})}
+
+  // studio finder
+  var area='all',div='all';
+  function applyFilters(){if(area!=='all'||div!=='all'){document.getElementById('studioList').classList.add('all');document.getElementById('more').hidden=true}var n=0;document.querySelectorAll('#studioList .studio').forEach(function(s){var ok=(area==='all'||s.dataset.area===area)&&(div==='all'||s.dataset.div===div);s.classList.toggle('hide',!ok);if(ok)n++});document.getElementById('empty').classList.toggle('show',n===0)}
+  function wire(id,key,set){document.querySelectorAll('#'+id+' .chip').forEach(function(c){c.addEventListener('click',function(){document.querySelectorAll('#'+id+' .chip').forEach(function(x){x.classList.remove('on')});c.classList.add('on');set(c.dataset[key]);applyFilters()})})}
+  wire('areaFilters','area',function(v){area=v});wire('divFilters','div',function(v){div=v});
+  var sList=document.getElementById('studioList'),moreBtn=document.getElementById('moreBtn');
+  moreBtn.addEventListener('click',function(){sList.classList.add('all');document.getElementById('more').hidden=true});
+  var nearBtn=document.getElementById('nearBtn'),nearMsg=document.getElementById('nearMsg');
+  function km(a,b,c,d){var R=6371,p=Math.PI/180,x=Math.sin((c-a)*p/2),y=Math.sin((d-b)*p/2),h=x*x+Math.cos(a*p)*Math.cos(c*p)*y*y;return 2*R*Math.asin(Math.sqrt(h))}
+  function sortBy(lat,lng){var rows=[].slice.call(sList.querySelectorAll('.studio'));rows.forEach(function(r){r._d=km(lat,lng,+r.dataset.lat,+r.dataset.lng);var d=r.querySelector('.dist');d.textContent=r._d.toFixed(1)+' km';d.classList.add('on')});rows.sort(function(a,b){return a._d-b._d});rows.forEach(function(r,i){r.classList.toggle('over',i>=3);sList.insertBefore(r,document.getElementById('empty'))});document.querySelectorAll('#areaFilters .chip').forEach(function(x){x.classList.remove('on')});document.querySelector('#areaFilters .chip[data-area="all"]').classList.add('on');area='all';applyFilters()}
+  nearBtn.addEventListener('click',function(){nearMsg.textContent='Finding you…';nearBtn.disabled=true;
+    function fail(){nearMsg.textContent='Location unavailable here. Showing Newcastle first.';sortBy(-32.927,151.765);nearBtn.disabled=false}
+    if(!navigator.geolocation){fail();return}
+    var done=false;var t=setTimeout(function(){if(!done){done=true;fail()}},6000);
+    try{navigator.geolocation.getCurrentPosition(function(pos){if(done)return;done=true;clearTimeout(t);sortBy(pos.coords.latitude,pos.coords.longitude);nearMsg.textContent='Sorted by distance from you.';nearBtn.disabled=false},function(){if(done)return;done=true;clearTimeout(t);fail()},{timeout:5000,maximumAge:600000})}catch(e){if(!done){done=true;clearTimeout(t);fail()}}
+  });
+
+  // reviews
+  var Q=[
+    {t:"Amazing support, training and coaching I've never had before. A structured approach with consistent results.",n:"Bec Calov",w:"Performance · Warners Bay",d:"performance"},
+    {t:"Spacious studio with natural light, warm friendly staff and a genuinely inclusive vibe.",n:"Victoria Blom",w:"Reformer · Warners Bay",d:"reformer"},
+    {t:"Great trainers and varied daily workouts. Challenging, engaging and the best start to a morning.",n:"Lauren McMillan",w:"Training · Newcastle",d:"training"},
+    {t:"Not your regular Pilates. A special community, crazy good programs and fun instructors.",n:"Brookey Baxter",w:"Reformer",d:"reformer"},
+    {t:"Best gym I've trained at. Coach Lachy is outstanding and extremely knowledgeable.",n:"Stefanie Ferrie",w:"Performance · Warners Bay",d:"performance"},
+    {t:"Killer workouts. Motivating coaching that makes sure you get the best result out of every class.",n:"Elsie Kruberg",w:"Training · Newcastle",d:"training"},
+    {t:"I love the flexibility of being able to go to the other studios. The programming and the coaches are amazing.",n:"Jessica Hood",w:"Training",d:"training"},
+    {t:"An amazing studio that creates comfort and confidence. The instructors push your goals, kindly.",n:"Danika Gillard",w:"Reformer · Warners Bay",d:"reformer"},
+    {t:"Excellent, knowledgeable trainers with a supportive approach. I've never felt more comfortable at a gym.",n:"Rebecca Pichaloff",w:"Performance · Warners Bay",d:"performance"}
+  ];
+  var qf='all',qi=0,list=Q;
+  var qT=document.getElementById('qText'),qN=document.getElementById('qName'),qW=document.getElementById('qWhere'),qD=document.getElementById('qDot'),qC=document.getElementById('qCount'),qBox=document.getElementById('quote');
+  var col={reformer:'#9A72A6',performance:'#9DAC87',training:'#EFBD3D'};
+  function show(){var q=list[qi];qT.textContent=q.t;qN.textContent=q.n;qW.textContent=q.w;qD.style.background=col[q.d];qC.textContent=(qi+1)+' / '+list.length;qBox.classList.remove('fade');void qBox.offsetWidth;qBox.classList.add('fade')}
+  document.getElementById('qNext').addEventListener('click',function(){qi=(qi+1)%list.length;show()});
+  document.getElementById('qPrev').addEventListener('click',function(){qi=(qi-1+list.length)%list.length;show()});
+  document.querySelectorAll('#qTabs .chip').forEach(function(c){c.addEventListener('click',function(){document.querySelectorAll('#qTabs .chip').forEach(function(x){x.classList.remove('on')});c.classList.add('on');qf=c.dataset.q;list=qf==='all'?Q:Q.filter(function(q){return q.d===qf});qi=0;show()})});
+  show();
+  var auto=setInterval(function(){qi=(qi+1)%list.length;show()},7000);
+  qBox.addEventListener('pointerdown',function(){clearInterval(auto)});
+
+  // newsletter
+  var f=document.getElementById('newsForm');f.addEventListener('submit',function(e){e.preventDefault();f.hidden=true;document.getElementById('newsOk').hidden=false});
+})();
+</script>
